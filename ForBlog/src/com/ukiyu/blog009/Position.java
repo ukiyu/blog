@@ -16,9 +16,13 @@ public class Position {
 	public Position plus(Position other) {
 		return of(x + other.x, y + other.y);
 	}
-
+	
 	public Position minus(Position other) {
-		return of(x - other.x, y - other.y);
+		return plus(other.negate());
+	}
+
+	public Position negate() {
+		return of(-x, -y);
 	}
 
 	@Override

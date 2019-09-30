@@ -39,7 +39,7 @@ public class Rectangle {
 				this.rate = rate;
 			}
 
-			public Position calculation(Position current, Size difference) {
+			public Position adjust(Position current, Size difference) {
 				return current.minus(difference.multiply(rate).toPosition());
 			}
 		}
@@ -64,7 +64,7 @@ public class Rectangle {
 			Size multipliedSize = size.multiply(rate);
 			Size differenceSize = multipliedSize.minus(size);
 
-			return Rectangle.of(base.calculation(position, differenceSize), multipliedSize);
+			return Rectangle.of(base.adjust(position, differenceSize), multipliedSize);
 		}
 
 	}

@@ -21,8 +21,12 @@ public class Size {
 		return of(height - other.height, width - other.width);
 	}
 
+	public Position toPosition(Position offset) {
+		return Position.of(height, width).plus(offset);
+	}
+
 	public Position toPosition() {
-		return Position.of(height, width);
+		return toPosition(Position.of(0, 0));
 	}
 
 	static public class Rate {
