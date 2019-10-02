@@ -35,7 +35,7 @@ public class Rectangle {
 
 			private final Size.Rate rate;
 
-			Base(Size.Rate rate){
+			private Base(Size.Rate rate){
 				this.rate = rate;
 			}
 
