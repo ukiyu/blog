@@ -51,7 +51,7 @@ public class Size {
 			return new Rate(x, x);
 		}
 
-		public Size apply(double height, double width) {
+		private Size apply(double height, double width) {
 			return Size.of(height * x, width * y);
 		}
 	}
