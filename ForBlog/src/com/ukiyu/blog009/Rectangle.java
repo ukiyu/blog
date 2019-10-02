@@ -39,7 +39,7 @@ public class Rectangle {
 				this.rate = rate;
 			}
 
-			public Position adjust(Position current, Size difference) {
+			private Position adjust(Position current, Size difference) {
 				return current.minus(difference.multiply(rate).toPosition());
 			}
 		}
